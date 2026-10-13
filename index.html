@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SP Electronics Online - electronics and appliance repairs, tested refurbished appliances and responsible reuse in South Africa.">
+  <title>SP Electronics Online | Repair. Restore. Reuse.</title>
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #1769aa;
+      --light: #f4f7fa;
+      --white: #ffffff;
+      --text: #273444;
+      --muted: #64748b;
+      --border: #dce4ec;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a { color: var(--blue); }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 17px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .brand span { color: var(--blue); }
+
+    nav {
+      display: flex;
+      gap: 17px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #10243a, #204f77);
+      color: var(--white);
+      padding: 85px 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.12;
+      max-width: 750px;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: #e2ebf5;
+      font-size: 18px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 12px 8px 0 0;
+    }
+
+    .button-primary {
+      background: #ffffff;
+      color: var(--navy);
+    }
+
+    .button-outline {
+      border: 1px solid #ffffff;
+      color: #ffffff;
+    }
+
+    section { padding: 65px 0; }
+
+    .section-heading {
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .section-heading p, .muted { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      background: var(--white);
+    }
+
+    .card h3 { color: var(--navy); }
+
+    .symbol {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .soft-section { background: var(--light); }
+
+    .notice {
+      background: #eaf2fa;
+      border-left: 4px solid var(--blue);
+      padding: 18px;
+      border-radius: 4px;
+    }
+
+    .steps {
+      padding-left: 22px;
+    }
+
+    .steps li { margin: 12px 0; }
+
+    .policy-list li { margin-bottom: 12px; }
+
+    .contact-panel {
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 35px;
+    }
+
+    .contact-panel h2 { color: var(--white); }
+
+    footer {
+      background: #0b1929;
+      color: #d6e0eb;
+      padding: 25px 0;
+      font-size: 13px;
+    }
+
+    footer a { color: #ffffff; }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding: 60px 0; }
+      .nav { align-items: flex-start; }
+      nav { gap: 12px; }
+      h2 { font-size: 27px; }
+      .contact-panel { padding: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">SP <span>Electronics</span> Online</a>
+      <nav aria-label="Main navigation">
+        <a href="#services">Repairs</a>
+        <a href="#shop">Refurbished Shop</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#policies">Policies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="eyebrow">Repair · Restore · Reuse</div>
+        <h1>Better use for the electronics you already own.</h1>
+        <p>
+          SP Electronics Online aims to make electronics and appliance
+          repairs easier, give unwanted items a second life, and offer
+          customers access to carefully tested refurbished products.
+        </p>
+        <a class="button button-primary" href="#services">Explore Our Services</a>
+        <a class="button button-outline" href="#shop">Browse Refurbished Items</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">What We Do</div>
+          <h2>Practical solutions, with less waste.</h2>
+          <p>
+            Our goal is to help customers make informed decisions about
+            repairing, replacing or responsibly reusing their appliances.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="symbol">🔧</div>
+            <h3>Repair Services</h3>
+            <p>
+              Enquire about electronics and household appliance faults.
+              We will assess the problem and explain the proposed work
+              and costs before proceeding.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">♻️</div>
+            <h3>Unwanted Appliances</h3>
+            <p>
+              Have an appliance you no longer need? Ask us whether we
+              can assess it for repair, refurbishment, parts recovery
+              or responsible recycling.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="symbol">✓</div>
+            <h3>Refurbished Products</h3>
+            <p>
+              Our planned second-hand shop will feature inspected
+              products, honest condition descriptions and available
+              test results, with applicable terms explained before sale.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section" id="shop">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">SP Refurbished</div>
+          <h2>Give good electronics another chance.</h2>
+          <p>
+            We intend to list suitable items recovered through customer
+            repairs, agreed trade-ins and other lawful sources.
+          </p>
+        </div>
+
+        <div class="notice">
+          <strong>Our online shop is being prepared.</strong>
+          <p>
+            No products are currently listed. Products will be added
+            after inspection and testing. Each listing should state the
+            asking price, visible condition, known faults, tests
+            performed and applicable sale terms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Simple Process</div>
+          <h2>How it works</h2>
+        </div>
+
+        <ol class="steps">
+          <li><strong>Tell us about the item.</strong> Describe the appliance, its fault or why you no longer need it.</li>
+          <li><strong>Agree on the next step.</strong> We explain any assessment fees, repair quote or proposed transfer of ownership before proceeding.</li>
+          <li><strong>Inspect and test.</strong> Suitable items are assessed and tested to the extent described in the service or product listing.</li>
+          <li><strong>Repair, reuse or recycle.</strong> With the necessary customer consent, suitable items may be repaired, resold or sent for responsible recycling.</li>
+        </ol>
+
+        <p class="muted">
+          An item left for repair does not automatically become our property.
+          We will obtain clear agreement before accepting an item for resale
+          or disposal.
+        </p>
+      </div>
+    </section>
+
+    <section class="soft-section" id="policies">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Our Commitments</div>
+          <h2>Clear terms. Honest service.</h2>
+          <p>
+            These are our intended operating principles. Full terms will
+            be published and reviewed before accepting online orders.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Repair Approval</h3>
+            <p>
+              Customers will be informed of assessment charges, proposed
+              work and quoted costs. Additional work requires approval.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Product Condition</h3>
+            <p>
+              Refurbished listings will distinguish tested functions
+              from untested features and disclose known defects.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Returns & Consumer Rights</h3>
+            <p>
+              Applicable South African consumer laws will be respected.
+              Return, refund and warranty terms will be provided before
+              purchase. Nothing here removes rights provided by law.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Warranty</h3>
+            <p>
+              Any additional seller warranty will be clearly described
+              for the relevant product. It will not replace statutory rights.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Delivery & Collection</h3>
+            <p>
+              Availability, delivery fees, collection arrangements and
+              expected timeframes will be agreed before an order is confirmed.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Privacy</h3>
+            <p>
+              Customer information should only be collected and used for
+              legitimate business purposes, with appropriate safeguards
+              and compliance with applicable privacy laws.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="eyebrow">Get in Touch</div>
+          <h2>Let's see if we can help.</h2>
+          <p>
+            Contact us about a faulty appliance, an item you want to offer
+            for refurbishment, or a product you hope to find.
+          </p>
+          <p>
+            Our official business contact details and enquiry form
+            will be added before the website launches.
+          </p>
+          <p><strong>SP Electronics Online</strong></p>
+          <p>South Africa</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year">2026</span> SP Electronics Online. All rights reserved.</p>
+      <p>Repair. Restore. Reuse.</p>
+      <p>Product availability, services and operating terms will be confirmed before launch.</p>
+    </div>
+  </footer>
+</body>
+</html>
