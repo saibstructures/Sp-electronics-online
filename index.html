@@ -4,431 +4,755 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SP Electronics Online - electronics and appliance repairs, tested refurbished appliances and responsible reuse in South Africa.">
-  <title>SP Electronics Online | Repair. Restore. Reuse.</title>
+
+  <meta name="description" content="SP Electronics Online is your digital hub for useful websites, online shopping and refurbished electronics. Search, discover and shop smarter.">
+
+  <meta name="theme-color" content="#1266a8">
+
+  <title>SP Electronics Online | Your Digital Hub</title>
+
   <style>
     :root {
-      --navy: #10243a;
-      --blue: #1769aa;
-      --light: #f4f7fa;
+      --blue: #1266a8;
+      --blue-dark: #10365a;
+      --green: #198754;
+      --green-light: #e8f5ed;
+      --blue-light: #eaf3fc;
       --white: #ffffff;
-      --text: #273444;
+      --background: #f5f8fb;
+      --text: #233448;
       --muted: #64748b;
-      --border: #dce4ec;
+      --border: #dce5ed;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
       color: var(--text);
       line-height: 1.6;
-      background: var(--white);
     }
 
-    a { color: var(--blue); }
+    a {
+      color: var(--blue);
+    }
+
+    button, input {
+      font: inherit;
+    }
 
     .container {
-      width: min(1100px, 90%);
+      width: min(1120px, 92%);
       margin: auto;
     }
 
     header {
       background: var(--white);
       border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 10;
     }
 
-    .nav {
+    .navbar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 17px 0;
+      padding: 16px 0;
       flex-wrap: wrap;
     }
 
     .brand {
-      font-size: 21px;
-      font-weight: 800;
-      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
     }
 
-    .brand span { color: var(--blue); }
+    .logo {
+      width: 53px;
+      height: 53px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--blue-dark);
+    }
+
+    .brand-name span {
+      color: var(--green);
+    }
+
+    .tagline {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .4px;
+    }
 
     nav {
       display: flex;
-      gap: 17px;
       flex-wrap: wrap;
+      gap: 17px;
     }
 
     nav a {
-      color: var(--navy);
-      text-decoration: none;
+      color: var(--blue-dark);
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    .link-card:hover {
+      color: var(--green);
     }
 
     .hero {
-      background: linear-gradient(120deg, #10243a, #204f77);
+      background: linear-gradient(125deg, #10365a, #1266a8);
       color: var(--white);
-      padding: 85px 0;
-    }
-
-    .hero h1 {
-      font-size: clamp(36px, 6vw, 58px);
-      line-height: 1.12;
-      max-width: 750px;
-      margin: 15px 0;
-    }
-
-    .hero p {
-      max-width: 620px;
-      color: #e2ebf5;
-      font-size: 18px;
+      padding: 76px 0 68px;
+      text-align: center;
     }
 
     .eyebrow {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 12px;
-      font-weight: bold;
+      font-weight: 800;
+      color: var(--green);
     }
 
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 12px 8px 0 0;
+    .hero .eyebrow {
+      color: #a9e8c2;
     }
 
-    .button-primary {
-      background: #ffffff;
-      color: var(--navy);
+    h1 {
+      font-size: clamp(35px, 6vw, 57px);
+      line-height: 1.12;
+      max-width: 790px;
+      margin: 15px auto;
     }
 
-    .button-outline {
-      border: 1px solid #ffffff;
-      color: #ffffff;
+    .hero p {
+      max-width: 660px;
+      margin: 0 auto 27px;
+      color: #e2edf7;
+      font-size: 17px;
     }
 
-    section { padding: 65px 0; }
+    .search-box {
+      display: flex;
+      max-width: 690px;
+      margin: 25px auto 14px;
+      padding: 6px;
+      gap: 8px;
+      background: var(--white);
+      border-radius: 9px;
+      box-shadow: 0 8px 30px #071e3540;
+    }
+
+    .search-box input {
+      width: 100%;
+      min-width: 0;
+      padding: 13px;
+      border: none;
+      outline: none;
+      color: var(--text);
+      background: transparent;
+    }
+
+    .search-box button {
+      padding: 12px 23px;
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .search-box button:hover {
+      background: #146c43;
+    }
+
+    .search-hint {
+      color: #e2edf7;
+      font-size: 12px;
+    }
+
+    section {
+      padding: 58px 0;
+    }
 
     .section-heading {
-      max-width: 680px;
-      margin-bottom: 30px;
+      max-width: 690px;
+      margin-bottom: 27px;
     }
 
     h2 {
-      color: var(--navy);
-      font-size: 32px;
+      color: var(--blue-dark);
+      font-size: clamp(26px, 4vw, 34px);
       line-height: 1.2;
+      margin: 8px 0 12px;
     }
 
-    .section-heading p, .muted { color: var(--muted); }
+    .section-heading p {
+      color: var(--muted);
+      margin: 0;
+    }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 18px;
     }
 
-    .card {
+    .link-card {
+      display: block;
+      padding: 23px;
+      background: var(--white);
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 24px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform .15s, box-shadow .15s;
+    }
+
+    .link-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 22px #10243a12;
+    }
+
+    .link-card h3 {
+      color: var(--blue-dark);
+      margin: 9px 0 5px;
+      font-size: 18px;
+    }
+
+    .link-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 12px;
+    }
+
+    .link-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 43px;
+      height: 43px;
+      border-radius: 10px;
+      font-size: 23px;
+      background: var(--blue-light);
+    }
+
+    .green-icon {
+      background: var(--green-light);
+    }
+
+    .soft {
+      background: #edf3f8;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .shop-panel {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 25px;
+      align-items: center;
+      padding: 32px;
       background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
     }
 
-    .card h3 { color: var(--navy); }
-
-    .symbol {
-      font-size: 28px;
-      margin-bottom: 8px;
+    .shop-panel p {
+      color: var(--muted);
     }
 
-    .soft-section { background: var(--light); }
-
-    .notice {
-      background: #eaf2fa;
-      border-left: 4px solid var(--blue);
-      padding: 18px;
-      border-radius: 4px;
+    .shop-highlight {
+      padding: 24px;
+      background: var(--green-light);
+      border-radius: 10px;
     }
 
-    .steps {
-      padding-left: 22px;
+    .shop-highlight strong {
+      color: var(--green);
     }
 
-    .steps li { margin: 12px 0; }
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      margin-top: 10px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+    }
 
-    .policy-list li { margin-bottom: 12px; }
+    .button:hover {
+      background: var(--blue-dark);
+    }
 
     .contact-panel {
-      background: var(--navy);
+      background: var(--blue-dark);
       color: var(--white);
       border-radius: 12px;
-      padding: 35px;
+      padding: 36px;
+      text-align: center;
     }
 
-    .contact-panel h2 { color: var(--white); }
+    .contact-panel h2 {
+      color: var(--white);
+    }
+
+    .contact-panel p {
+      color: #e0eaf4;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      padding: 13px 22px;
+      margin-top: 10px;
+      border-radius: 6px;
+      background: var(--green);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .whatsapp-button:hover {
+      background: #146c43;
+    }
+
+    .disclaimer {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 20px;
+    }
 
     footer {
-      background: #0b1929;
-      color: #d6e0eb;
-      padding: 25px 0;
+      background: #0b2238;
+      color: #d7e3ee;
+      padding: 27px 0;
       font-size: 13px;
     }
 
-    footer a { color: #ffffff; }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #b9e9cd;
+    }
 
     @media (max-width: 760px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero { padding: 60px 0; }
-      .nav { align-items: flex-start; }
-      nav { gap: 12px; }
-      h2 { font-size: 27px; }
-      .contact-panel { padding: 24px; }
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .shop-panel {
+        grid-template-columns: 1fr;
+        padding: 23px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .navbar {
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-box {
+        flex-wrap: wrap;
+      }
+
+      .search-box button {
+        width: 100%;
+      }
+
+      .brand-name {
+        font-size: 17px;
+      }
+
+      .contact-panel {
+        padding: 25px 18px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home">SP <span>Electronics</span> Online</a>
-      <nav aria-label="Main navigation">
-        <a href="#services">Repairs</a>
-        <a href="#shop">Refurbished Shop</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#policies">Policies</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="#home" aria-label="SP Electronics Online home">
+
+      <svg class="logo" viewBox="0 0 100 100"
+           xmlns="http://www.w3.org/2000/svg"
+           aria-label="Four-point star logo" role="img">
+        <circle cx="50" cy="50" r="44"
+                fill="white" stroke="#1266a8" stroke-width="3"/>
+        <path d="M50 19
+                 C54 37 63 46 81 50
+                 C63 54 54 63 50 81
+                 C46 63 37 54 19 50
+                 C37 46 46 37 50 19Z"
+              fill="#1266a8"/>
+        <circle cx="50" cy="50" r="4" fill="#198754"/>
+      </svg>
+
+      <div>
+        <div class="brand-name">SP Electronics <span>Online</span></div>
+        <div class="tagline">YOUR DIGITAL HUB</div>
+      </div>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#discover">Discover</a>
+      <a href="#shopping">Shopping</a>
+      <a href="#shop">SP Refurbished</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="container">
+
+      <div class="eyebrow">Discover more. Choose smarter.</div>
+
+      <h1>Everything starts here.</h1>
+
+      <p>
+        Your convenient starting point for web searches, useful websites,
+        online shopping and quality second-hand electronics.
+        Simple, effortless and transparent.
+      </p>
+
+      <form class="search-box"
+            action="https://www.google.com/search"
+            method="get"
+            target="_blank"
+            rel="noopener">
+
+        <input type="search"
+               name="q"
+               placeholder="What are you looking for?"
+               aria-label="Search the web"
+               required>
+
+        <button type="submit">Search the Web</button>
+      </form>
+
+      <div class="search-hint">
+        Search the web directly from SP Electronics Online.
+      </div>
+
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="eyebrow">Repair · Restore · Reuse</div>
-        <h1>Better use for the electronics you already own.</h1>
+  <section id="discover">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Explore</div>
+        <h2>Your shortcuts to the internet</h2>
         <p>
-          SP Electronics Online aims to make electronics and appliance
-          repairs easier, give unwanted items a second life, and offer
-          customers access to carefully tested refurbished products.
-        </p>
-        <a class="button button-primary" href="#services">Explore Our Services</a>
-        <a class="button button-outline" href="#shop">Browse Refurbished Items</a>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">What We Do</div>
-          <h2>Practical solutions, with less waste.</h2>
-          <p>
-            Our goal is to help customers make informed decisions about
-            repairing, replacing or responsibly reusing their appliances.
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <div class="symbol">🔧</div>
-            <h3>Repair Services</h3>
-            <p>
-              Enquire about electronics and household appliance faults.
-              We will assess the problem and explain the proposed work
-              and costs before proceeding.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="symbol">♻️</div>
-            <h3>Unwanted Appliances</h3>
-            <p>
-              Have an appliance you no longer need? Ask us whether we
-              can assess it for repair, refurbishment, parts recovery
-              or responsible recycling.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="symbol">✓</div>
-            <h3>Refurbished Products</h3>
-            <p>
-              Our planned second-hand shop will feature inspected
-              products, honest condition descriptions and available
-              test results, with applicable terms explained before sale.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="soft-section" id="shop">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">SP Refurbished</div>
-          <h2>Give good electronics another chance.</h2>
-          <p>
-            We intend to list suitable items recovered through customer
-            repairs, agreed trade-ins and other lawful sources.
-          </p>
-        </div>
-
-        <div class="notice">
-          <strong>Our online shop is being prepared.</strong>
-          <p>
-            No products are currently listed. Products will be added
-            after inspection and testing. Each listing should state the
-            asking price, visible condition, known faults, tests
-            performed and applicable sale terms.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-it-works">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Simple Process</div>
-          <h2>How it works</h2>
-        </div>
-
-        <ol class="steps">
-          <li><strong>Tell us about the item.</strong> Describe the appliance, its fault or why you no longer need it.</li>
-          <li><strong>Agree on the next step.</strong> We explain any assessment fees, repair quote or proposed transfer of ownership before proceeding.</li>
-          <li><strong>Inspect and test.</strong> Suitable items are assessed and tested to the extent described in the service or product listing.</li>
-          <li><strong>Repair, reuse or recycle.</strong> With the necessary customer consent, suitable items may be repaired, resold or sent for responsible recycling.</li>
-        </ol>
-
-        <p class="muted">
-          An item left for repair does not automatically become our property.
-          We will obtain clear agreement before accepting an item for resale
-          or disposal.
+          Discover useful online destinations without having to remember
+          every website address.
         </p>
       </div>
-    </section>
 
-    <section class="soft-section" id="policies">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Our Commitments</div>
-          <h2>Clear terms. Honest service.</h2>
-          <p>
-            These are our intended operating principles. Full terms will
-            be published and reviewed before accepting online orders.
-          </p>
-        </div>
+      <div class="grid">
 
-        <div class="grid">
-          <article class="card">
-            <h3>Repair Approval</h3>
-            <p>
-              Customers will be informed of assessment charges, proposed
-              work and quoted costs. Additional work requires approval.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Product Condition</h3>
-            <p>
-              Refurbished listings will distinguish tested functions
-              from untested features and disclose known defects.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Returns & Consumer Rights</h3>
-            <p>
-              Applicable South African consumer laws will be respected.
-              Return, refund and warranty terms will be provided before
-              purchase. Nothing here removes rights provided by law.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Warranty</h3>
-            <p>
-              Any additional seller warranty will be clearly described
-              for the relevant product. It will not replace statutory rights.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Delivery & Collection</h3>
-            <p>
-              Availability, delivery fees, collection arrangements and
-              expected timeframes will be agreed before an order is confirmed.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Privacy</h3>
-            <p>
-              Customer information should only be collected and used for
-              legitimate business purposes, with appropriate safeguards
-              and compliance with applicable privacy laws.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-<section id="contact">
-  <div class="container">
-    <div class="contact-panel">
-      <div class="eyebrow">Get in Touch</div>
-
-      <h2>Let's see if we can help.</h2>
-
-      <p>
-        Need an appliance repaired? Have an unwanted electronic
-        item? Looking for a quality refurbished appliance?
-        Contact us directly on WhatsApp.
-      </p>
-
-      <p>
-        <strong>SP Electronics Online</strong><br>
-        South Africa
-      </p>
-
-      <p>
-        <strong>WhatsApp:</strong>
-        <a href="https://wa.me/27643841716"
-           style="color:#ffffff;">
-          064 384 1716
+        <a class="link-card"
+           href="https://www.google.com/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon">⌕</div>
+          <h3>Google</h3>
+          <p>Find information, businesses, services and answers.</p>
+          <span class="link-label">Search Google ↗</span>
         </a>
+
+        <a class="link-card"
+           href="https://www.youtube.com/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon">▶</div>
+          <h3>YouTube</h3>
+          <p>Discover videos, tutorials, reviews and entertainment.</p>
+          <span class="link-label">Visit YouTube ↗</span>
+        </a>
+
+        <a class="link-card"
+           href="https://www.takealot.com/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon green-icon">🛍</div>
+          <h3>Takealot</h3>
+          <p>Explore products from a South African online retailer.</p>
+          <span class="link-label">Visit Takealot ↗</span>
+        </a>
+
+        <a class="link-card"
+           href="https://www.makro.co.za/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon">▦</div>
+          <h3>Makro</h3>
+          <p>Explore appliances, electronics and household products.</p>
+          <span class="link-label">Visit Makro ↗</span>
+        </a>
+
+        <a class="link-card"
+           href="https://www.facebook.com/marketplace/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon green-icon">◎</div>
+          <h3>Facebook Marketplace</h3>
+          <p>Discover second-hand goods offered by other users.</p>
+          <span class="link-label">Explore Marketplace ↗</span>
+        </a>
+
+        <a class="link-card"
+           href="https://www.google.com/maps/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon">⌖</div>
+          <h3>Google Maps</h3>
+          <p>Find places, directions and nearby businesses.</p>
+          <span class="link-label">Open Maps ↗</span>
+        </a>
+
+      </div>
+
+      <p class="disclaimer">
+        External websites are independently operated by their respective
+        owners. SP Electronics Online does not control their content,
+        availability, prices or terms.
       </p>
 
-      <a
-        class="button button-primary"
-        href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online%2C%20I%20would%20like%20to%20make%20an%20enquiry."
-        target="_blank"
-        rel="noopener noreferrer">
-        Chat with Us on WhatsApp
-      </a>
+    </div>
+  </section>
+
+  <section class="soft" id="shopping">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Shop Smarter</div>
+        <h2>Find what you need</h2>
+        <p>
+          Use our search or visit established shopping destinations.
+          Compare prices, product specifications, delivery fees and
+          seller terms before purchasing.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <a class="link-card"
+           href="https://www.google.com/search?q=electronics+and+appliances+South+Africa"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon">⌕</div>
+          <h3>Find Electronics</h3>
+          <p>Search for electronics and appliances across the web.</p>
+          <span class="link-label">Find products ↗</span>
+        </a>
+
+        <a class="link-card"
+           href="https://www.google.com/search?q=compare+appliance+prices+South+Africa"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon green-icon">⇄</div>
+          <h3>Compare Prices</h3>
+          <p>Research prices and compare available buying options.</p>
+          <span class="link-label">Compare online ↗</span>
+        </a>
+
+        <a class="link-card"
+           href="https://www.google.com/search?q=second+hand+electronics+South+Africa"
+           target="_blank" rel="noopener noreferrer">
+          <div class="icon">♻</div>
+          <h3>Find Second-Hand Deals</h3>
+          <p>Search for pre-owned electronics and household appliances.</p>
+          <span class="link-label">Discover deals ↗</span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="container">
+
+      <div class="shop-panel">
+
+        <div>
+          <div class="eyebrow">SP Refurbished</div>
+          <h2>Good products deserve a second life.</h2>
+
+          <p>
+            Our planned refurbished shop will offer suitable electronics
+            and appliances acquired through agreed customer arrangements
+            and other lawful sources.
+          </p>
+
+          <p>
+            Before listing an item, we aim to inspect it, perform
+            appropriate tests and describe its condition honestly.
+            Known faults and applicable sale terms will be disclosed.
+          </p>
+        </div>
+
+        <div class="shop-highlight">
+          <div class="icon green-icon">♻</div>
+          <h3>Buy with more confidence</h3>
+
+          <p>
+            Product listings, prices and availability will appear here
+            as items become available.
+          </p>
+
+          <strong>No invented stock or prices.</strong>
+          <br>
+          <a class="button" href="#contact">Enquire on WhatsApp</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="about">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Our Approach</div>
+        <h2>Simple. Effortless. Transparent.</h2>
+        <p>
+          SP Electronics Online aims to make discovering useful websites
+          and finding value in refurbished electronics easier.
+        </p>
+      </div>
+
+      <div class="grid">
+
+        <div class="link-card">
+          <div class="icon">◎</div>
+          <h3>Simple</h3>
+          <p>
+            Useful links, direct web search and easy access to our
+            refurbished shop in one convenient place.
+          </p>
+        </div>
+
+        <div class="link-card">
+          <div class="icon green-icon">✓</div>
+          <h3>Transparent</h3>
+          <p>
+            Honest product descriptions, disclosed known faults,
+            clear prices and understandable terms.
+          </p>
+        </div>
+
+        <div class="link-card">
+          <div class="icon">♧</div>
+          <h3>Responsible Reuse</h3>
+          <p>
+            Where practical, suitable unwanted electronics can be
+            refurbished for another owner rather than wasted.
+          </p>
+        </div>
+
+      </div>
+
+      <p class="disclaimer">
+        SP Electronics Online is an independent website and is not
+        affiliated with or endorsed by the external websites linked here.
+      </p>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="contact-panel">
+        <div class="eyebrow">Get in Touch</div>
+        <h2>Connect with SP Electronics Online</h2>
+
+        <p>
+          Have a question about an unwanted appliance, a refurbished
+          product or our website? Send us a WhatsApp message.
+        </p>
+
+        <p>
+          <strong>WhatsApp: 064 384 1716</strong>
+        </p>
+
+        <a class="whatsapp-button"
+           href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online%2C%20I%20have%20an%20enquiry."
+           target="_blank"
+           rel="noopener noreferrer">
+          Chat with Us on WhatsApp ↗
+        </a>
+
+        <p style="font-size:12px; margin-top:20px;">
+          Messaging availability depends on WhatsApp and your internet
+          connection.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>SP Electronics Online</strong>
+      <br>
+      Your digital hub. Smarter choices.
+    </div>
+
+    <div>
+      © 2026 SP Electronics Online.
+      <br>
+      External websites have their own terms and privacy policies.
     </div>
   </div>
-</section>
-  </main>
+</footer>
 
-  <footer>
-    <div class="container">
-      <p>© <span id="year">2026</span> SP Electronics Online. All rights reserved.</p>
-      <p>Repair. Restore. Reuse.</p>
-      <p>Product availability, services and operating terms will be confirmed before launch.</p>
-    </div>
-  </footer>
 </body>
 </html>
