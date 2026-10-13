@@ -5,224 +5,187 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10365b">
-  <meta name="description" content="SP Electronics Online — discover useful websites, search online and explore responsibly refurbished electronics and appliances in South Africa.">
-  <title>SP Electronics Online | Discover More</title>
+  <meta name="description" content="SP Electronics Online, part of Saib Group. Online electronics and appliance repair enquiries, collection arrangements, refurbished products and responsible electronics salvage in South Africa.">
+  <title>SP Electronics Online | Repairs, Refurbished & Salvage</title>
 
   <style>
     :root {
+      --blue: #176fc1;
       --navy: #10365b;
-      --blue: #1676c5;
-      --green: #15966a;
-      --ink: #1b2b3b;
-      --muted: #647487;
-      --line: #e2eaf0;
-      --pale-blue: #eef6fd;
-      --pale-green: #eaf7f0;
+      --green: #159568;
+      --ink: #203247;
+      --muted: #667789;
+      --line: #e0e8ef;
+      --pale-blue: #eff6fc;
+      --pale-green: #edf8f2;
       --white: #ffffff;
-      --radius: 18px;
-      --shadow: 0 12px 35px rgba(16, 54, 91, .07);
+      --radius: 15px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 90px;
     }
 
     body {
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
       background: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.65;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
 
-    button, input {
-      font: inherit;
-    }
-
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .container {
-      width: min(1160px, 92%);
+    .wrap {
+      width: min(1140px, 92%);
       margin-inline: auto;
     }
 
-    .site-header {
+    .header {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255, 255, 255, .96);
+      background: rgba(255,255,255,.97);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
     }
 
     .header-inner {
-      min-height: 88px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding-block: 12px;
+      gap: 22px;
+      padding: 12px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 11px;
       text-decoration: none;
-      min-width: 0;
     }
 
     .logo {
-      width: 60px;
-      height: 60px;
+      width: 57px;
+      height: 57px;
       flex: 0 0 auto;
     }
 
     .brand-name {
       display: block;
       color: var(--navy);
-      font-size: 1.13rem;
       font-weight: 800;
-      letter-spacing: -.5px;
-      line-height: 1.25;
+      font-size: 1.08rem;
+      line-height: 1.3;
     }
 
-    .brand-tag {
+    .brand-sub {
       display: block;
-      margin-top: 5px;
+      margin-top: 4px;
       color: var(--green);
       font-size: .68rem;
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
+    }
+
+    .group-tag {
+      display: block;
+      color: var(--muted);
+      font-size: .72rem;
     }
 
     .nav {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
+      flex-wrap: wrap;
       justify-content: flex-end;
-      gap: 21px;
+      gap: 15px;
     }
 
     .nav a {
       color: var(--navy);
-      font-size: .9rem;
+      font-size: .85rem;
       font-weight: 700;
       text-decoration: none;
     }
 
-    .nav a:hover {
-      color: var(--green);
-    }
+    .nav a:hover { color: var(--green); }
 
-    .nav .nav-shop {
-      padding: 10px 15px;
+    .nav .nav-cta {
+      padding: 9px 13px;
+      border-radius: 8px;
       color: white;
       background: var(--green);
-      border-radius: 9px;
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 86px 0 76px;
+      padding: 76px 0;
       background:
-        radial-gradient(ellipse at 90% 15%, rgba(21,150,106,.11), transparent 35%),
-        radial-gradient(ellipse at 5% 85%, rgba(22,118,197,.12), transparent 34%),
-        #f7fbff;
+        radial-gradient(ellipse at 95% 5%, #dcefe6, transparent 34%),
+        radial-gradient(ellipse at 0% 100%, #e1effb, transparent 40%),
+        #f8fbfe;
     }
 
-    .hero-inner {
+    .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr .75fr;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 45px;
       align-items: center;
-      gap: 55px;
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
       color: var(--green);
-      font-size: .77rem;
+      font-size: .75rem;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 24px;
-      height: 2px;
-      background: var(--green);
-    }
-
-    h1, h2, h3, p {
-      overflow-wrap: anywhere;
-    }
-
     h1 {
-      max-width: 680px;
-      margin: 18px 0;
+      margin: 15px 0;
       color: var(--navy);
-      font-size: clamp(2.7rem, 5.6vw, 4.8rem);
-      letter-spacing: -2.8px;
-      line-height: 1.06;
+      font-size: clamp(2.45rem, 5.2vw, 4.3rem);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
     }
 
-    h1 span {
-      color: var(--blue);
-    }
+    h1 span { color: var(--blue); }
 
-    .hero-copy {
-      max-width: 590px;
+    .hero p {
+      max-width: 640px;
       color: var(--muted);
-      font-size: 1.08rem;
+      font-size: 1.06rem;
     }
 
-    .actions {
+    .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 27px;
+      gap: 11px;
+      margin-top: 25px;
     }
 
     .btn {
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      gap: 9px;
-      min-height: 47px;
-      padding: 12px 19px;
+      gap: 8px;
+      padding: 12px 17px;
+      min-height: 45px;
       border: 1px solid transparent;
-      border-radius: 10px;
+      border-radius: 9px;
       background: var(--blue);
       color: white;
       font-weight: 700;
+      text-align: center;
       text-decoration: none;
       cursor: pointer;
-      transition: transform .18s, background .18s;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      background: var(--navy);
-    }
-
-    .btn-green {
-      background: var(--green);
-    }
+    .btn:hover { background: var(--navy); }
+    .btn-green { background: var(--green); }
 
     .btn-outline {
       border-color: var(--line);
@@ -230,78 +193,62 @@
       color: var(--navy);
     }
 
-    .btn-outline:hover {
-      color: white;
-    }
+    .btn-outline:hover { color: white; }
 
-    .hero-art {
-      display: grid;
-      place-items: center;
-      min-height: 320px;
-    }
-
-    .orbit {
-      display: grid;
-      place-items: center;
-      width: min(300px, 75vw);
-      aspect-ratio: 1;
-      border: 1px solid rgba(22,118,197,.25);
-      border-radius: 50%;
-      background: rgba(255,255,255,.68);
-      box-shadow: var(--shadow);
+    .hero-visual {
       position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 310px;
     }
 
-    .orbit::before, .orbit::after {
+    .logo-orbit {
+      display: grid;
+      place-items: center;
+      position: relative;
+      width: min(270px, 70vw);
+      aspect-ratio: 1;
+      border: 1px solid #c4dceb;
+      border-radius: 50%;
+      background: rgba(255,255,255,.75);
+    }
+
+    .logo-orbit::before,
+    .logo-orbit::after {
       content: "";
       position: absolute;
-      border: 1px solid rgba(21,150,106,.25);
+      border: 1px solid #cce7d8;
       border-radius: 50%;
     }
 
-    .orbit::before {
-      inset: 19px;
-    }
+    .logo-orbit::before { inset: 17px; }
+    .logo-orbit::after { inset: 36px; }
 
-    .orbit::after {
-      inset: 39px;
-    }
-
-    .orbit-logo {
-      width: 132px;
+    .logo-orbit svg {
       position: relative;
       z-index: 1;
+      width: 125px;
     }
 
-    .floating-label {
+    .orbit-label {
       position: absolute;
-      z-index: 2;
-      padding: 9px 13px;
+      padding: 8px 12px;
       border: 1px solid var(--line);
-      border-radius: 10px;
+      border-radius: 9px;
       background: white;
-      box-shadow: var(--shadow);
       color: var(--navy);
-      font-size: .78rem;
+      font-size: .76rem;
       font-weight: 800;
+      box-shadow: 0 8px 25px #10365b10;
     }
 
-    .float-one {
-      top: 22%;
-      right: -4%;
-    }
+    .orbit-a { top: 18%; right: -2%; }
+    .orbit-b { bottom: 17%; left: -3%; }
 
-    .float-two {
-      bottom: 18%;
-      left: -7%;
-    }
-
-    section {
-      padding: 72px 0;
-    }
+    section { padding: 65px 0; }
 
     .section-head {
-      max-width: 730px;
+      max-width: 760px;
       margin: 0 auto 32px;
       text-align: center;
     }
@@ -309,257 +256,164 @@
     .section-head h2 {
       margin: 8px 0;
       color: var(--navy);
-      font-size: clamp(1.9rem, 4vw, 2.65rem);
-      letter-spacing: -1px;
+      font-size: clamp(1.8rem, 4vw, 2.55rem);
+      letter-spacing: -.8px;
       line-height: 1.2;
     }
 
-    .section-head p {
-      color: var(--muted);
-    }
+    .section-head p { color: var(--muted); }
 
-    .search-panel {
-      max-width: 790px;
-      margin: 0 auto;
-      padding: 13px;
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      background: white;
-      box-shadow: var(--shadow);
-    }
-
-    .search-form {
-      display: flex;
-      gap: 10px;
-    }
-
-    .search-form input {
-      width: 100%;
-      min-width: 0;
-      padding: 15px 16px;
-      border: 1px solid transparent;
-      border-radius: 9px;
-      outline: none;
-      background: #f5f8fb;
-    }
-
-    .search-form input:focus {
-      border-color: var(--blue);
-    }
-
-    .search-note {
-      margin: 10px 5px 0;
-      color: var(--muted);
-      font-size: .78rem;
-    }
-
-    .quick-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .quick-links a {
-      padding: 8px 13px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--navy);
-      font-size: .84rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .quick-links a:hover {
-      border-color: var(--green);
-      background: var(--pale-green);
-    }
-
-    .directory {
-      background: #f8fafc;
-    }
-
-    .category-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      margin: 34px 0 17px;
-    }
-
-    .category-title h3 {
-      margin: 0;
-      color: var(--navy);
-      font-size: 1.2rem;
-    }
-
-    .category-title span {
-      color: var(--muted);
-      font-size: .83rem;
-    }
-
-    .link-grid {
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 17px;
     }
 
-    .link-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 180px;
-      padding: 22px;
+    .card {
+      padding: 23px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: white;
-      text-decoration: none;
-      transition: transform .18s, box-shadow .18s, border-color .18s;
     }
 
-    .link-card:hover {
-      transform: translateY(-3px);
-      border-color: #bdd9ee;
-      box-shadow: var(--shadow);
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
     }
 
-    .link-symbol {
+    .card p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .card-icon {
       display: grid;
       place-items: center;
-      width: 42px;
-      height: 42px;
-      margin-bottom: 14px;
+      width: 45px;
+      height: 45px;
+      margin-bottom: 15px;
       border-radius: 12px;
-      background: var(--pale-blue);
       color: var(--blue);
+      background: var(--pale-blue);
       font-size: 1.3rem;
       font-weight: 800;
     }
 
-    .link-card:nth-child(3n) .link-symbol {
+    .card:nth-child(3n) .card-icon {
+      color: var(--green);
       background: var(--pale-green);
-      color: var(--green);
     }
 
-    .link-card h4 {
-      margin: 0 0 7px;
-      color: var(--navy);
-      font-size: 1.03rem;
+    .soft-section { background: #f7fafc; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
     }
 
-    .link-card p {
-      flex: 1;
-      margin: 0 0 15px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .visit {
-      color: var(--green);
-      font-size: .86rem;
-      font-weight: 800;
-    }
-
-    .shop {
+    .step {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
       background: white;
     }
 
-    .shop-banner {
+    .step-number {
+      color: var(--green);
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .step h3 { color: var(--navy); }
+
+    .step p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .notice {
+      margin-top: 24px;
+      padding: 20px 22px;
+      border-left: 4px solid var(--green);
+      border-radius: 7px;
+      background: var(--pale-green);
+    }
+
+    .notice p { margin: 5px 0; }
+
+    .shop-panel {
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
-      gap: 25px;
-      padding: clamp(24px, 5vw, 45px);
-      border: 1px solid #d7eadf;
-      border-radius: 22px;
-      background: linear-gradient(115deg, var(--pale-green), #f7fbff);
+      gap: 24px;
+      padding: clamp(23px, 4vw, 40px);
+      border: 1px solid #d5e9dc;
+      border-radius: 18px;
+      background: linear-gradient(120deg, var(--pale-green), var(--pale-blue));
     }
 
-    .shop-banner h3 {
-      margin: 0 0 9px;
+    .shop-panel h3 {
+      margin: 0 0 8px;
       color: var(--navy);
-      font-size: 1.65rem;
+      font-size: 1.6rem;
     }
 
-    .shop-banner p {
-      max-width: 650px;
-      margin: 0;
+    .shop-panel p {
+      max-width: 700px;
       color: var(--muted);
     }
 
-    .shop-emblem {
+    .shop-symbol {
       display: grid;
       place-items: center;
-      width: 100px;
-      height: 100px;
-      border-radius: 25px;
+      width: 85px;
+      height: 85px;
+      border-radius: 20px;
       background: white;
       color: var(--green);
-      box-shadow: var(--shadow);
-      font-size: 2.7rem;
+      font-size: 2.5rem;
     }
 
-    .shop-features {
+    .policy-list {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 22px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
     }
 
-    .feature {
-      padding: 22px;
+    details {
+      padding: 18px 20px;
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 12px;
+      background: white;
     }
 
-    .feature h4 {
-      margin: 0 0 7px;
+    summary {
       color: var(--navy);
+      font-weight: 800;
+      cursor: pointer;
     }
 
-    .feature p {
-      margin: 0;
+    details p, details li {
       color: var(--muted);
       font-size: .91rem;
     }
 
-    .principles {
-      background: #f8fafc;
-    }
+    details ul { padding-left: 20px; }
 
-    .principle-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .principle {
-      padding: 25px 22px;
-      border-radius: 15px;
-      background: white;
+    .partner-panel {
+      padding: 30px;
       border: 1px solid var(--line);
+      border-radius: 17px;
+      background: white;
+      text-align: center;
     }
 
-    .principle-number {
-      color: var(--green);
-      font-size: .78rem;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
-
-    .principle h3 {
-      color: var(--navy);
-      margin: 10px 0;
-    }
-
-    .principle p {
-      color: var(--muted);
-      margin: 0;
-      font-size: .94rem;
-    }
+    .partner-panel h3 { color: var(--navy); }
 
     .contact {
-      padding: 65px 0;
+      padding: 62px 0;
       background: var(--navy);
       color: white;
       text-align: center;
@@ -567,468 +421,568 @@
 
     .contact h2 {
       margin: 0;
-      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
     }
 
     .contact p {
-      max-width: 630px;
-      margin: 14px auto 24px;
+      max-width: 650px;
+      margin: 13px auto 23px;
       color: #dce8f2;
     }
 
-    .contact .btn {
-      background: var(--green);
-    }
+    .contact .btn { background: var(--green); }
 
-    .contact .btn:hover {
-      background: #11744f;
-    }
-
-    .contact-details {
-      margin-top: 18px;
+    .contact small {
+      display: block;
+      margin-top: 16px;
       color: #dce8f2;
-      font-size: .9rem;
     }
 
     footer {
-      padding: 27px 0;
-      background: #0b2945;
-      color: #d4e1ed;
-      font-size: .84rem;
+      padding: 23px 0;
+      background: #0a243e;
+      color: #dce8f2;
+      font-size: .82rem;
     }
 
     .footer-inner {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 15px;
+      gap: 12px;
     }
 
-    footer p {
-      margin: 0;
-    }
+    footer p { margin: 0; }
 
-    footer a {
-      color: white;
-    }
-
-    :focus-visible {
-      outline: 3px solid #70b8ee;
-      outline-offset: 3px;
-    }
+    footer a { color: white; }
 
     @media (max-width: 850px) {
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .hero-art {
-        min-height: 270px;
-      }
-
-      .link-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .nav {
-        gap: 12px;
-      }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 270px; }
+      .cards, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
-    @media (max-width: 560px) {
+    @media (max-width: 580px) {
       .header-inner {
-        flex-direction: column;
         align-items: flex-start;
-      }
-
-      .nav {
-        justify-content: flex-start;
-      }
-
-      .hero {
-        padding: 55px 0;
-      }
-
-      h1 {
-        letter-spacing: -1.5px;
-      }
-
-      section {
-        padding: 52px 0;
-      }
-
-      .link-grid,
-      .shop-features,
-      .principle-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .search-form {
         flex-direction: column;
       }
 
-      .shop-banner {
-        grid-template-columns: 1fr;
-      }
-
-      .shop-emblem {
-        width: 70px;
-        height: 70px;
-      }
-
-      .float-one {
-        right: -1%;
-      }
-
-      .float-two {
-        left: -1%;
-      }
+      .nav { justify-content: flex-start; gap: 12px; }
+      .cards, .steps, .policy-list { grid-template-columns: 1fr; }
+      .shop-panel { grid-template-columns: 1fr; }
+      .shop-symbol { width: 65px; height: 65px; }
+      .search-form { flex-direction: column; }
+      section { padding: 48px 0; }
+      h1 { letter-spacing: -1px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        transition: none !important;
-      }
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="SP Electronics Online home">
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="SP Electronics Online home">
+      <!-- Custom logo approximation based on the requested four-point star -->
+      <svg class="logo" viewBox="0 0 100 100" role="img"
+           aria-label="Blue four-point star inside a thin green circle">
+        <circle cx="50" cy="50" r="44" fill="#fff"
+                stroke="#159568" stroke-width="2.2"/>
+        <path d="M50 15
+                 C55 35 65 45 85 50
+                 C65 55 55 65 50 85
+                 C45 65 35 55 15 50
+                 C35 45 45 35 50 15Z"
+              fill="#176fc1"/>
+        <circle cx="50" cy="50" r="3.5" fill="#159568"/>
+      </svg>
+      <span>
+        <span class="brand-name">SP Electronics Online</span>
+        <span class="brand-sub">REPAIRS • REFURBISHED • REUSE</span>
+        <span class="group-tag">Part of Saib Group</span>
+      </span>
+    </a>
 
-        <!-- Custom SP four-point star logo -->
-        <svg class="logo" viewBox="0 0 100 100" role="img" aria-label="Blue and green four-point star inside a circle">
-          <circle cx="50" cy="50" r="44"
-                  fill="#ffffff" stroke="#15966a" stroke-width="2.2"/>
-          <path d="M50 15
-                   C54 35 65 46 85 50
-                   C65 54 54 65 50 85
-                   C46 65 35 54 15 50
-                   C35 46 46 35 50 15Z"
-                fill="#1676c5"/>
-          <circle cx="50" cy="50" r="4" fill="#15966a"/>
-        </svg>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#repairs">Repairs</a>
+      <a href="#collection">Collection</a>
+      <a href="#shop">Refurbished</a>
+      <a href="#salvage">Salvage</a>
+      <a href="#policies">Policies</a>
+      <a class="nav-cta" href="#contact">WhatsApp Us</a>
+    </nav>
+  </div>
+</header>
 
-        <span>
-          <span class="brand-name">SP Electronics Online</span>
-          <span class="brand-tag">DISCOVER MORE. CONNECT BETTER.</span>
-        </span>
-      </a>
+<main id="home">
 
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#search">Search</a>
-        <a href="#directory">Website Directory</a>
-        <a href="#shop">SP Refurbished</a>
-        <a class="nav-shop" href="#contact">Contact Us</a>
-      </nav>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Part of Saib Group · South Africa</div>
+        <h1>Electronics and appliance care, <span>made simpler.</span></h1>
+        <p>
+          Need an electronic device or household appliance repaired?
+          Looking for a refurbished item, or have electronics you no longer need?
+          Start with an online enquiry and we'll discuss the next steps with you.
+        </p>
+        <div class="buttons">
+          <a class="btn" href="#repairs">Explore Repair Services →</a>
+          <a class="btn btn-outline" href="#shop">Browse Refurbished</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="logo-orbit">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="#fff"
+                    stroke="#159568" stroke-width="2.2"/>
+            <path d="M50 15
+                     C55 35 65 45 85 50
+                     C65 55 55 65 50 85
+                     C45 65 35 55 15 50
+                     C35 45 45 35 50 15Z"
+                  fill="#176fc1"/>
+            <circle cx="50" cy="50" r="3.5" fill="#159568"/>
+          </svg>
+          <span class="orbit-label orbit-a">Repair</span>
+          <span class="orbit-label orbit-b">Reuse</span>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main id="home">
-
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <div class="eyebrow">Your digital destination</div>
-          <h1>Discover more of your <span>online world.</span></h1>
-          <p class="hero-copy">
-            Search the internet, discover useful websites and explore
-            shopping destinations — all from one simple starting point.
-            And keep an eye out for our growing range of refurbished
-            electronics and appliances.
-          </p>
-
-          <div class="actions">
-            <a class="btn" href="#search">Start Searching <span aria-hidden="true">→</span></a>
-            <a class="btn btn-outline" href="#directory">Explore Websites</a>
-          </div>
-        </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit">
-            <svg class="orbit-logo" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="44"
-                      fill="#ffffff" stroke="#15966a" stroke-width="2.2"/>
-              <path d="M50 15
-                       C54 35 65 46 85 50
-                       C65 54 54 65 50 85
-                       C46 65 35 54 15 50
-                       C35 46 46 35 50 15Z"
-                    fill="#1676c5"/>
-              <circle cx="50" cy="50" r="4" fill="#15966a"/>
-            </svg>
-            <span class="floating-label float-one">Explore</span>
-            <span class="floating-label float-two">Discover</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="search">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Find what you need</div>
-          <h2>Where would you like to go?</h2>
-          <p>
-            Enter a question, product, service or topic. Your search opens
-            on Google in a separate tab.
-          </p>
-        </div>
-
-        <div class="search-panel">
-          <form class="search-form" action="https://www.google.com/search"
-                method="get" target="_blank">
-            <input type="search" name="q"
-                   placeholder="Search anything online..."
-                   aria-label="Enter your internet search" required>
-            <button class="btn" type="submit">Search the Web →</button>
-          </form>
-          <p class="search-note">
-            Searches are provided by Google. SP Electronics Online does not
-            control Google's search results.
-          </p>
-        </div>
-
-        <div class="quick-links" aria-label="Popular destinations">
-          <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">Google</a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Maps</a>
-          <a href="https://www.takealot.com/" target="_blank" rel="noopener noreferrer">Takealot</a>
-          <a href="https://www.facebook.com/marketplace/" target="_blank" rel="noopener noreferrer">Marketplace</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="directory" id="directory">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">The online directory</div>
-          <h2>Useful websites, organised.</h2>
-          <p>
-            A growing collection of external websites to help you find
-            information, shop, learn and explore.
-          </p>
-        </div>
-
-        <div class="category-title">
-          <h3>Shopping & Products</h3>
-          <span>Browse external stores</span>
-        </div>
-
-        <div class="link-grid">
-          <a class="link-card" href="https://www.takealot.com/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">T</span>
-            <h4>Takealot</h4>
-            <p>Browse electronics, appliances, homeware and everyday products.</p>
-            <span class="visit">Visit website ↗</span>
-          </a>
-
-          <a class="link-card" href="https://www.makro.co.za/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">M</span>
-            <h4>Makro</h4>
-            <p>Explore electronics, household appliances and more.</p>
-            <span class="visit">Visit website ↗</span>
-          </a>
-
-          <a class="link-card" href="https://www.facebook.com/marketplace/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">F</span>
-            <h4>Facebook Marketplace</h4>
-            <p>Discover local listings and second-hand goods.</p>
-            <span class="visit">Visit website ↗</span>
-          </a>
-        </div>
-
-        <div class="category-title">
-          <h3>Search, Learn & Discover</h3>
-          <span>Explore information and ideas</span>
-        </div>
-
-        <div class="link-grid">
-          <a class="link-card" href="https://www.google.com/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">G</span>
-            <h4>Google Search</h4>
-            <p>Find information, businesses, products and answers.</p>
-            <span class="visit">Search Google ↗</span>
-          </a>
-
-          <a class="link-card" href="https://www.youtube.com/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">▶</span>
-            <h4>YouTube</h4>
-            <p>Explore videos, educational content and tutorials.</p>
-            <span class="visit">Watch videos ↗</span>
-          </a>
-
-          <a class="link-card" href="https://maps.google.com/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">⌖</span>
-            <h4>Google Maps</h4>
-            <p>Look up locations, local businesses and directions.</p>
-            <span class="visit">Open Maps ↗</span>
-          </a>
-        </div>
-
-        <div class="category-title">
-          <h3>Connect & Communicate</h3>
-          <span>Stay connected online</span>
-        </div>
-
-        <div class="link-grid">
-          <a class="link-card" href="https://www.whatsapp.com/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">W</span>
-            <h4>WhatsApp</h4>
-            <p>Discover WhatsApp and its communication features.</p>
-            <span class="visit">Visit website ↗</span>
-          </a>
-
-          <a class="link-card" href="https://www.facebook.com/"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">f</span>
-            <h4>Facebook</h4>
-            <p>Connect with people, groups and communities.</p>
-            <span class="visit">Visit website ↗</span>
-          </a>
-
-          <a class="link-card" href="https://www.google.com/search"
-             target="_blank" rel="noopener noreferrer">
-            <span class="link-symbol">+</span>
-            <h4>Find More Websites</h4>
-            <p>Search for other services and websites that interest you.</p>
-            <span class="visit">Discover more ↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="shop" id="shop">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">A second life for electronics</div>
-          <h2>Introducing SP Refurbished.</h2>
-          <p>
-            Our planned shop will focus on suitable pre-owned and refurbished
-            electronics and household appliances.
-          </p>
-        </div>
-
-        <div class="shop-banner">
-          <div>
-            <h3>Buy with clearer information.</h3>
-            <p>
-              We intend to list genuine products we have acquired with
-              permission, inspected and tested as appropriate. Listings will
-              explain what we know about each item's condition before you buy.
-            </p>
-            <div class="actions">
-              <a class="btn btn-green" href="#contact">Ask About Our Shop</a>
-            </div>
-          </div>
-          <div class="shop-emblem" aria-hidden="true">↻</div>
-        </div>
-
-        <div class="shop-features">
-          <div class="feature">
-            <h4>01. Condition</h4>
-            <p>Descriptions that distinguish used, refurbished and imperfect items.</p>
-          </div>
-
-          <div class="feature">
-            <h4>02. Testing</h4>
-            <p>Clear details of the checks actually performed and any known faults.</p>
-          </div>
-
-          <div class="feature">
-            <h4>03. Clear Terms</h4>
-            <p>Visible prices, delivery arrangements and applicable returns or warranty terms.</p>
-          </div>
-        </div>
-
-        <p class="search-note" style="text-align:center; margin-top:24px">
-          No products are currently advertised here. Product listings will be
-          added when genuine stock is ready for sale.
+  <section id="repairs">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Our services</div>
+        <h2>Electronics & appliance repairs</h2>
+        <p>
+          Tell us what item you have, what is wrong and where you are located.
+          We'll review your enquiry and discuss whether we can assist.
         </p>
       </div>
-    </section>
 
-    <section class="principles">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Our approach</div>
-          <h2>Useful. Honest. Built to grow.</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">⌁</div>
+          <h3>Electronics Repairs</h3>
           <p>
-            We want SP Electronics Online to become a helpful destination,
-            not just another page on the internet.
+            Enquire about suitable electronic devices. Share the make, model,
+            symptoms and any relevant photographs so we can assess your request.
           </p>
-        </div>
+          <a class="btn" href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online.%20I%20would%20like%20to%20enquire%20about%20an%20electronics%20repair."
+             target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
+        </article>
 
-        <div class="principle-grid">
-          <article class="principle">
-            <span class="principle-number">01 / DISCOVER</span>
-            <h3>A useful hub</h3>
-            <p>Bring helpful online destinations together in one easy-to-navigate place.</p>
-          </article>
+        <article class="card">
+          <div class="card-icon">▣</div>
+          <h3>Appliance Repairs</h3>
+          <p>
+            Enquire about suitable household appliances. We will discuss
+            the reported fault, feasibility, inspection and quotation before work begins.
+          </p>
+          <a class="btn" href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online.%20I%20would%20like%20to%20enquire%20about%20an%20appliance%20repair."
+             target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
+        </article>
 
-          <article class="principle">
-            <span class="principle-number">02 / REUSE</span>
-            <h3>Responsible resale</h3>
-            <p>Acquire unwanted items with clear consent and give suitable products another chance.</p>
-          </article>
-
-          <article class="principle">
-            <span class="principle-number">03 / TRUST</span>
-            <h3>Clear information</h3>
-            <p>Describe products honestly and publish policies that customers can understand.</p>
-          </article>
-        </div>
+        <article class="card">
+          <div class="card-icon">↔</div>
+          <h3>Collection Arrangements</h3>
+          <p>
+            If an item cannot conveniently be brought to us, ask about collection
+            and return delivery options. Availability and transport costs must be agreed first.
+          </p>
+          <a class="btn btn-green" href="#collection">How Collection Works</a>
+        </article>
       </div>
-    </section>
 
-    <section class="contact" id="contact">
-      <div class="container">
-        <h2>Let's connect.</h2>
+      <div class="notice">
+        <strong>Important:</strong>
+        Sending an enquiry does not confirm a repair, booking, price or collection.
+        We'll confirm the available service, quotation and arrangements with you first.
+        We only accept work that we have agreed to undertake.
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="collection">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Online enquiries · Collection by arrangement</div>
+        <h2>A straightforward repair process</h2>
         <p>
-          Questions about SP Electronics Online or our future refurbished
-          shop? Get in touch with us on WhatsApp.
+          The business currently operates online. Collection and return transport
+          may be arranged where available; visits to a physical shop are not offered.
+        </p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step-number">STEP 01</span>
+          <h3>Tell us about the item</h3>
+          <p>
+            Send the item type, make, model, fault symptoms, your area and
+            photographs if useful. Please don't send passwords or sensitive personal information.
+          </p>
+        </article>
+
+        <article class="step">
+          <span class="step-number">STEP 02</span>
+          <h3>Agree on the next step</h3>
+          <p>
+            We'll discuss whether an initial assessment is possible, any
+            inspection or repair charges, the expected process and any limits to the estimate.
+          </p>
+        </article>
+
+        <article class="step">
+          <span class="step-number">STEP 03</span>
+          <h3>Arrange transport and repair</h3>
+          <p>
+            If collection is available, we'll confirm the collection and return
+            transport charges, timing, item details and agreed terms before arranging it.
+          </p>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>Repair package and transport costs:</strong>
+        If we offer a prepaid repair package, its price and exact inclusions
+        will be explained before payment. Collection and return transport are
+        separate charges unless a written quote explicitly says they are included.
+        No payment is requested through this webpage.
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">SP Refurbished</div>
+        <h2>Pre-owned electronics with honest descriptions</h2>
+        <p>
+          We plan to give suitable electronics and appliances another useful life.
+          Products will be advertised only when actual items are available and ready for sale.
+        </p>
+      </div>
+
+      <div class="shop-panel">
+        <div>
+          <h3>Our refurbished product shop</h3>
+          <p>
+            Each listing should include the actual item, price, cosmetic condition,
+            tests performed, known faults, what's included and applicable sale terms.
+            Items will not be described as fully refurbished unless that description is justified.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-green"
+               href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online.%20Please%20let%20me%20know%20about%20available%20refurbished%20items."
+               target="_blank" rel="noopener noreferrer">Ask About Available Items</a>
+          </div>
+        </div>
+        <div class="shop-symbol" aria-hidden="true">↻</div>
+      </div>
+
+      <div class="notice">
+        <strong>Stock notice:</strong>
+        No product is being advertised as available until it has been added
+        with its real price and details. At present, this section is an introduction,
+        not an online checkout or live stock catalogue.
+      </div>
+    </div>
+  </section>
+
+  <section class="soft-section" id="salvage">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Give unwanted items a second chance</div>
+        <h2>Have electronics you no longer need?</h2>
+        <p>
+          If you have an unwanted appliance or electronic item, contact us to
+          discuss whether we can collect it for assessment, repair, parts or resale.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">↻</div>
+          <h3>Unwanted Appliances</h3>
+          <p>
+            Tell us what the item is, whether it works, its condition and your area.
+            We will advise whether we are interested in taking it.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">⌁</div>
+          <h3>Salvage & Parts</h3>
+          <p>
+            Some items may be suitable for parts, repair or responsible recycling.
+            Acceptance depends on the item and our current capabilities.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">✓</div>
+          <h3>Clear Ownership Agreement</h3>
+          <p>
+            We will only retain or resell an item when the owner has clearly
+            agreed to transfer it to us. A repair request alone does not transfer ownership.
+          </p>
+        </article>
+      </div>
+
+      <div class="buttons" style="justify-content:center">
+        <a class="btn btn-green"
+           href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online.%20I%20have%20an%20unwanted%20electronic%20item%20or%20appliance.%20Can%20I%20send%20you%20the%20details%3F"
+           target="_blank" rel="noopener noreferrer">Offer an Unwanted Item</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="business">
+    <div class="wrap">
+      <div class="partner-panel">
+        <div class="eyebrow">Business enquiries</div>
+        <h2>Working with companies and retailers</h2>
+        <p>
+          We welcome enquiries from retailers, online marketplaces, businesses,
+          property operators and other organisations interested in discussing
+          suitable repair work, returned or unwanted electronics, salvage and
+          potential refurbishment opportunities.
+        </p>
+        <p>
+          Any partnership, collection, service level, pricing or supply arrangement
+          would be discussed and agreed individually. No existing corporate
+          partnership is implied by this invitation.
         </p>
         <a class="btn"
-           href="https://wa.me/27643841716"
-           target="_blank"
-           rel="noopener noreferrer">
-          Chat with SP Electronics Online ↗
-        </a>
-        <div class="contact-details">
-          WhatsApp: 064 384 1716
-        </div>
+           href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online.%20I%20am%20contacting%20you%20with%20a%20business%20partnership%20enquiry."
+           target="_blank" rel="noopener noreferrer">Discuss a Business Opportunity</a>
       </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <p>© <span id="year">2026</span> SP Electronics Online.</p>
-      <p>External websites are independently operated and are not affiliated
-         with SP Electronics Online unless explicitly stated.</p>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+  <section class="soft-section" id="policies">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Customer information</div>
+        <h2>Our policies & service terms</h2>
+        <p>
+          Please read these summaries before agreeing to a service or sale.
+          The specific written quotation or sale agreement will confirm the terms
+          that apply to your transaction.
+        </p>
+      </div>
+
+      <div class="policy-list">
+
+        <details>
+          <summary>1. Repair enquiries & quotations</summary>
+          <p>
+            An enquiry is not a confirmed booking. We will agree the item,
+            reported fault, inspection requirements, applicable fees and scope
+            before starting work. Initial estimates may change if further faults
+            are discovered; we will seek approval for additional work and costs.
+          </p>
+          <p>
+            If an item is uneconomical or cannot be repaired, we will explain
+            the findings as far as we can establish them. Any inspection fee
+            must be disclosed and agreed beforehand.
+          </p>
+        </details>
+
+        <details>
+          <summary>2. Collection & delivery</summary>
+          <p>
+            Collection and return delivery are subject to availability, location,
+            item size, access and safe transport. Transport charges, timing,
+            collection address and return arrangements must be agreed before dispatch.
+          </p>
+          <p>
+            Customers should disclose fragile, heavy, damaged or hazardous items
+            and package items appropriately when instructed. We will discuss
+            any special handling requirements before accepting an item.
+          </p>
+        </details>
+
+        <details>
+          <summary>3. Repair packages & payment</summary>
+          <p>
+            If a prepaid package is offered, the written description will state
+            what is included, exclusions, transport charges, any assessment
+            limits and how additional work is approved. We will not treat a
+            payment as authorisation for undisclosed extras.
+          </p>
+          <p>
+            Payment methods and due dates will be stated in the quote or invoice.
+            No payment gateway or online checkout is currently provided on this website.
+          </p>
+        </details>
+
+        <details>
+          <summary>4. Testing, results & limitations</summary>
+          <p>
+            Testing depends on the item, the reported fault, available equipment
+            and the work agreed. We will describe the checks actually performed
+            and any limitations we know about.
+          </p>
+          <p>
+            Repair cannot guarantee that every hidden or unrelated fault will
+            be discovered. We will explain relevant risks and seek consent before
+            proceeding with work that may carry a material risk of further damage.
+          </p>
+        </details>
+
+        <details>
+          <summary>5. Repair workmanship & warranties</summary>
+          <p>
+            Any specific workmanship warranty, duration, coverage and exclusions
+            will be provided in writing. Do not assume that every repair has
+            the same warranty or that a manufacturer's warranty remains valid.
+          </p>
+          <p>
+            Nothing in these terms is intended to remove rights that customers
+            have under applicable South African law, including rights that may
+            apply under the Consumer Protection Act.
+          </p>
+        </details>
+
+        <details>
+          <summary>6. Refurbished products, returns & defects</summary>
+          <p>
+            Product listings should state whether an item is used, refurbished,
+            tested, incomplete or sold with known defects. Photographs, included
+            accessories, known faults, price and applicable warranty terms should
+            be disclosed before purchase.
+          </p>
+          <p>
+            Returns, remedies and warranty rights will be handled according to
+            the transaction terms and applicable law. A used or refurbished
+            description does not automatically cancel statutory consumer rights.
+            Contact us promptly if a purchased item has a problem.
+          </p>
+        </details>
+
+        <details>
+          <summary>7. Unwanted items & salvage ownership</summary>
+          <p>
+            A customer may ask us to assess an unwanted item, but that alone
+            does not give us permission to keep, dismantle or sell it. Ownership
+            transfers only after a clear agreement with a person authorised to
+            transfer the item.
+          </p>
+          <p>
+            For items accepted as salvage, we will record the agreed transfer
+            and whether any payment, collection fee or other condition applies.
+            Items not accepted remain the owner's responsibility, subject to
+            any separate written arrangement.
+          </p>
+        </details>
+
+        <details>
+          <summary>8. Uncollected repair items</summary>
+          <p>
+            Any collection deadline, storage charge or proposed action regarding
+            an uncollected item must be disclosed in advance and handled in
+            accordance with applicable law. We will not assume ownership merely
+            because an item has not been collected.
+          </p>
+        </details>
+
+        <details>
+          <summary>9. Privacy & customer information</summary>
+          <p>
+            We use information supplied in enquiries to respond, assess service
+            requests, arrange agreed collections and manage transactions.
+            We should only request information relevant to the service.
+          </p>
+          <p>
+            We will take reasonable steps to protect personal information and
+            handle it in line with applicable privacy law, including POPIA.
+            Do not send passwords, banking PINs or unnecessary sensitive information
+            through WhatsApp.
+          </p>
+        </details>
+
+        <details>
+          <summary>10. Electronics disposal & recycling</summary>
+          <p>
+            Items that cannot reasonably be reused may require responsible
+            electronic-waste handling. Acceptance depends on the item and our
+            ability to handle it appropriately. We will not promise recycling
+            services that have not been arranged.
+          </p>
+        </details>
+
+        <details>
+          <summary>11. Website & external links</summary>
+          <p>
+            This website provides information and contact options. External
+            websites are independently operated, and their content, availability,
+            prices and policies are not controlled by SP Electronics Online.
+          </p>
+        </details>
+
+        <details>
+          <summary>12. Complaints & resolving problems</summary>
+          <p>
+            Please contact us on WhatsApp with your name, transaction details
+            and a description of the concern. We will review the matter and
+            respond as reasonably as possible. Applicable legal rights and
+            remedies remain unaffected.
+          </p>
+        </details>
+
+      </div>
+
+      <div class="notice">
+        <strong>Before launch:</strong> These are starter policy summaries, not
+        a substitute for South African legal advice. Before accepting paid work
+        or selling goods, we should finalise the terms, verify applicable
+        consumer and privacy requirements, and add the business's correct legal
+        details and service arrangements.
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="eyebrow" style="color:#8de0b9">Part of Saib Group</div>
+      <h2>Tell us how we can help.</h2>
+      <p>
+        Contact us about a repair, collection, refurbished product, unwanted
+        appliance or business opportunity. Please include your area and a brief
+        description so we can guide you.
+      </p>
+      <a class="btn"
+         href="https://wa.me/27643841716?text=Hello%20SP%20Electronics%20Online.%20I%20would%20like%20to%20make%20an%20enquiry."
+         target="_blank" rel="noopener noreferrer">
+        Contact Us on WhatsApp
+      </a>
+      <small>WhatsApp: 064 384 1716</small>
+      <small>Online enquiries and collection arrangements by agreement. No walk-in premises are advertised.</small>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>© <span id="year">2026</span> SP Electronics Online · Part of Saib Group</p>
+    <p>All services and sales are subject to agreed terms and applicable law.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
